@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Becky Perry</title>
+  <meta name="description" content="Becky Perry — host of The Highly Recommended. As opinionated as I am tall." />
+  <meta property="og:title" content="Becky Perry" />
+  <meta property="og:description" content="As opinionated as I am tall." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://beckyperry.com" />
+  <meta property="og:image" content="https://beckyperry.com/becky-banner.jpg" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Bebas+Neue&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --bg:#D6D6D5; --ink:#111A15; --light:#F2F2F0;
+      --thr:#1E88E5; --thr-d:#1565C0; --pink:#FF66C4;
+      --muted:#6E726E; --line:rgba(17,26,21,.16);
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body {
+      background:var(--bg); color:var(--ink);
+      font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;
+      line-height:1.6; -webkit-font-smoothing:antialiased;
+      min-height:100vh; display:flex; flex-direction:column; align-items:center;
+    }
+    .sr-only { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
+
+    /* ---------- Banner ---------- */
+    .banner { width:100%; display:block; }
+
+    .wrap { width:100%; max-width:540px; padding:30px 24px 48px; flex:1; }
+    .eyebrow { font-size:.72rem; letter-spacing:.22em; text-transform:uppercase; color:var(--muted); font-weight:600; text-align:center; margin-bottom:28px; }
+
+    /* ---------- About ---------- */
+    .about { font-size:1.02rem; border-top:1px solid var(--line); padding-top:28px; margin-bottom:40px; }
+    .about p + p { margin-top:14px; }
+    .about .thr-ref { color:var(--thr); font-style:italic; }
+
+    /* ---------- Links ---------- */
+    .links { display:flex; flex-direction:column; gap:12px; }
+    .link {
+      display:flex; align-items:center; justify-content:space-between; gap:16px;
+      padding:18px 22px; background:var(--ink); color:var(--light);
+      text-decoration:none; border-radius:4px;
+      transition:transform .18s ease, background .18s ease, color .18s ease;
+    }
+    .link:hover, .link:focus-visible { background:var(--pink); color:var(--ink); transform:translateX(6px); }
+    .link:focus-visible { outline:3px solid var(--ink); outline-offset:3px; }
+    .link.thr { background:var(--thr); color:var(--light); }
+    .link.thr:hover, .link.thr:focus-visible { background:var(--thr-d); color:var(--light); }
+
+    .left { display:flex; align-items:center; gap:14px; }
+    .ico { width:24px; height:24px; flex-shrink:0; display:flex; }
+    .ico svg { width:100%; height:100%; }
+    .link-text { display:flex; flex-direction:column; }
+    .link-label { font-family:'Bebas Neue',sans-serif; font-size:1.5rem; letter-spacing:.04em; line-height:1; }
+    .link-sub { font-size:.78rem; color:rgba(242,242,240,.7); margin-top:3px; }
+    .link:hover .link-sub, .link:focus-visible .link-sub { color:rgba(17,26,21,.7); }
+    .link.thr .link-sub { color:rgba(242,242,240,.7); }
+    .arrow { font-size:1.3rem; flex-shrink:0; }
+
+    /* ---------- Footer ---------- */
+    footer { width:100%; max-width:540px; padding:0 24px 40px; text-align:center; font-size:.78rem; color:var(--muted); }
+
+    /* ---------- Entrance ---------- */
+    .fade { opacity:0; transform:translateY(14px); animation:rise .7s ease forwards; }
+    .fade:nth-child(1){animation-delay:.05s;} .fade:nth-child(2){animation-delay:.15s;} .fade:nth-child(3){animation-delay:.25s;}
+    @keyframes rise { to { opacity:1; transform:translateY(0); } }
+    @media (prefers-reduced-motion:reduce) {
+      .fade { animation:none; opacity:1; transform:none; }
+      html { scroll-behavior:auto; }
+      .link { transition:background .18s ease, color .18s ease; }
+    }
+  </style>
+</head>
+<body>
+  <h1 class="sr-only">Becky Perry — As opinionated as I am tall.</h1>
+  <img class="banner" src="becky-banner.jpg" alt="Becky Perry — As opinionated as I am tall." />
+
+  <main class="wrap">
+    <p class="eyebrow fade">Austin, TX</p>
+
+    <section class="about fade">
+      <p>6'2" former pro volleyball player. At this height you don't get to be overlooked, so I stopped trying to be agreeable instead of honest a long time ago.</p>
+      <p>I host <em class="thr-ref">The Highly Recommended</em>, a limited series highlighting quietly extraordinary people — and I share my perspective through humorous storytelling and skits.</p>
+      <p>Sharp, warm, and definitely unfiltered. Pull up a chair.</p>
+    </section>
+
+    <nav class="links fade" aria-label="Links">
+      <a class="link thr" href="https://thehighlyrecommended.com" target="_blank" rel="noopener">
+        <span class="link-text">
+          <span class="link-label">The Highly Recommended</span>
+          <span class="link-sub">Stories of people worth knowing</span>
+        </span>
+        <span class="arrow" aria-hidden="true">&rarr;</span>
+      </a>
+
+      <a class="link" href="https://instagram.com/becky_perry" target="_blank" rel="noopener">
+        <span class="left">
+          <span class="ico" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+              <rect x="2.5" y="2.5" width="19" height="19" rx="5.5"/>
+              <circle cx="12" cy="12" r="4.3"/>
+              <circle cx="17.6" cy="6.4" r="1.15" fill="currentColor" stroke="none"/>
+            </svg>
+          </span>
+          <span class="link-text">
+            <span class="link-label">Instagram</span>
+            <span class="link-sub">@becky_perry</span>
+          </span>
+        </span>
+        <span class="arrow" aria-hidden="true">&rarr;</span>
+      </a>
+
+      <a class="link" href="https://tiktok.com/@beckydperry" target="_blank" rel="noopener">
+        <span class="left">
+          <span class="ico" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M16.7 5.9a4.4 4.4 0 0 1-1.12-2.9h-3.27v13.2a2.4 2.4 0 1 1-1.74-2.31V8.5a5.66 5.66 0 1 0 5.01 5.62V9.05A7.46 7.46 0 0 0 20 10.46V7.18a4.4 4.4 0 0 1-3.3-1.28z"/>
+            </svg>
+          </span>
+          <span class="link-text">
+            <span class="link-label">TikTok</span>
+            <span class="link-sub">@beckydperry</span>
+          </span>
+        </span>
+        <span class="arrow" aria-hidden="true">&rarr;</span>
+      </a>
+
+      <a class="link" href="mailto:boss@beckyperry.com">
+        <span class="link-text">
+          <span class="link-label">Work With Me</span>
+          <span class="link-sub">Collabs, press &amp; partnerships</span>
+        </span>
+        <span class="arrow" aria-hidden="true">&rarr;</span>
+      </a>
+    </nav>
+  </main>
+
+  <footer>
+    &copy; <span id="year"></span> Becky Perry &middot; A Teaspoon Productions brand
+  </footer>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
